@@ -1,0 +1,1014 @@
+/* =====================================
+   NIMBUS DESIGN SYSTEM
+===================================== */
+
+:root {
+  --background: #faf8f4;
+
+  --primary: #183d35;
+
+  --secondary: #777c75;
+
+  --sage: #a8b8a0;
+
+  --terracotta: #c77b5c;
+
+  --white: #ffffff;
+
+  --border: #e9e5dd;
+
+  --serif: "Bree Serif", serif;
+
+  --sans: "DM Sans", sans-serif;
+
+  --handwriting: "Caveat", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+
+  background: var(--background);
+
+  color: var(--primary);
+
+  overflow-x: hidden;
+
+  min-height: 100vh;
+}
+
+/* =====================================
+   BACKGROUND DECORATIONS
+===================================== */
+
+.background-decoration {
+  position: fixed;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.2;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.decoration-one {
+  width: 400px;
+
+  height: 400px;
+
+  background: var(--sage);
+
+  top: -150px;
+
+  right: -100px;
+
+  animation: floatOne 12s ease-in-out infinite alternate;
+}
+
+.decoration-two {
+  width: 350px;
+
+  height: 350px;
+
+  background: #e6b9a5;
+
+  bottom: -150px;
+
+  left: -100px;
+
+  animation: floatTwo 14s ease-in-out infinite alternate;
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.navbar {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 30px 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  animation: slideDown 0.8s ease both;
+}
+
+.logo {
+  font-family: var(--serif);
+
+  font-size: 32px;
+
+  color: var(--primary);
+
+  text-decoration: none;
+
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--terracotta);
+}
+
+.nav-links {
+  display: flex;
+
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: var(--secondary);
+
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--terracotta);
+}
+
+.nav-button {
+  text-decoration: none;
+
+  color: var(--primary);
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  padding: 12px 21px;
+
+  border-radius: 40px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: var(--primary);
+
+  color: var(--white);
+
+  transform: translateY(-3px);
+}
+
+.nav-button span {
+  margin-left: 8px;
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+  max-width: 1000px;
+
+  margin: 90px auto 100px;
+
+  text-align: center;
+
+  padding: 0 25px;
+}
+
+.hero-content {
+  animation: fadeUp 1s ease both;
+}
+
+.eyebrow {
+  font-family: var(--handwriting);
+
+  font-size: 25px;
+
+  color: var(--terracotta);
+
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  transform: rotate(-3deg);
+}
+
+.hero h1 {
+  font-family: var(--serif);
+
+  font-size: clamp(48px, 7vw, 78px);
+
+  font-weight: 400;
+
+  line-height: 1.12;
+
+  letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+  color: var(--terracotta);
+
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 530px;
+
+  margin: 25px auto 0;
+
+  color: var(--secondary);
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+/* =====================================
+   BILLING TOGGLE
+===================================== */
+
+.billing-area {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.billing-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.billing-label {
+  color: var(--secondary);
+
+  font-size: 13px;
+
+  transition: color 0.3s ease;
+}
+
+.active-label {
+  color: var(--primary);
+
+  font-weight: 700;
+}
+
+.toggle {
+  width: 48px;
+
+  height: 27px;
+
+  background: var(--primary);
+
+  border: none;
+
+  border-radius: 30px;
+
+  padding: 3px;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.toggle span {
+  display: block;
+
+  height: 21px;
+
+  width: 21px;
+
+  background: var(--white);
+
+  border-radius: 50%;
+
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.toggle.yearly span {
+  transform: translateX(21px);
+}
+
+.discount {
+  background: #e6ede3;
+
+  color: var(--primary);
+
+  padding: 7px 13px;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.handwritten-note {
+  display: block;
+
+  font-family: var(--handwriting);
+
+  font-size: 24px;
+
+  color: var(--terracotta);
+
+  margin-top: 20px;
+
+  transform: rotate(-2deg);
+}
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.pricing-section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 0 30px;
+}
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.section-label {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: var(--terracotta);
+}
+
+.section-heading h2 {
+  font-family: var(--serif);
+
+  font-size: 43px;
+
+  font-weight: 400;
+
+  margin-top: 15px;
+}
+
+.section-heading h2 span {
+  color: var(--terracotta);
+
+  font-style: italic;
+}
+
+.section-heading p {
+  color: var(--secondary);
+
+  font-size: 14px;
+
+  margin-top: 12px;
+}
+
+/* =====================================
+   PRICING GRID
+===================================== */
+
+.pricing-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 22px;
+
+  padding: 35px 30px;
+
+  position: relative;
+
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s ease,
+    border-color 0.3s ease;
+
+  animation: fadeUp 0.8s ease both;
+}
+
+.pricing-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.pricing-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.pricing-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 25px 55px rgba(24, 61, 53, 0.1);
+
+  border-color: var(--sage);
+}
+
+.pricing-card.popular {
+  border: 2px solid var(--primary);
+
+  box-shadow: 0 15px 40px rgba(24, 61, 53, 0.09);
+
+  transform: translateY(-12px);
+}
+
+.pricing-card.popular:hover {
+  transform: translateY(-20px);
+}
+
+/* =====================================
+   POPULAR BADGE
+===================================== */
+
+.popular-badge {
+  position: absolute;
+
+  top: -14px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: var(--primary);
+
+  color: var(--white);
+
+  padding: 8px 17px;
+
+  border-radius: 30px;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* =====================================
+   CARD HEADER
+===================================== */
+
+.card-header {
+  margin-bottom: 28px;
+}
+
+.plan-icon {
+  width: 42px;
+
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: #eef1ea;
+
+  color: var(--primary);
+
+  border-radius: 13px;
+
+  font-size: 24px;
+
+  margin-bottom: 22px;
+}
+
+.popular .plan-icon {
+  background: var(--primary);
+
+  color: var(--white);
+}
+
+.card-header h3 {
+  font-family: var(--serif);
+
+  font-size: 27px;
+
+  font-weight: 400;
+}
+
+.card-header p {
+  color: var(--secondary);
+
+  font-size: 12px;
+
+  margin-top: 8px;
+}
+
+/* =====================================
+   PRICING
+===================================== */
+
+.price-container {
+  min-height: 90px;
+}
+
+.price {
+  display: flex;
+
+  align-items: baseline;
+}
+
+.currency {
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.amount {
+  font-family: var(--serif);
+
+  font-size: 49px;
+
+  letter-spacing: -2px;
+}
+
+.period {
+  display: block;
+
+  color: var(--secondary);
+
+  font-size: 11px;
+
+  margin-top: 3px;
+}
+
+.custom-price {
+  font-family: var(--serif);
+
+  font-size: 38px;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.plan-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 40px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.button-light {
+  color: var(--primary);
+
+  background: var(--background);
+
+  border: 1px solid var(--border);
+}
+
+.button-light:hover {
+  background: var(--primary);
+
+  color: var(--white);
+
+  transform: translateY(-3px);
+}
+
+.button-primary {
+  color: var(--white);
+
+  background: var(--primary);
+
+  border: 1px solid var(--primary);
+}
+
+.button-primary:hover {
+  background: var(--terracotta);
+
+  border-color: var(--terracotta);
+
+  transform: translateY(-3px);
+}
+
+.plan-button span {
+  transition: transform 0.3s ease;
+}
+
+.plan-button:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* =====================================
+   FEATURES
+===================================== */
+
+.card-divider {
+  height: 1px;
+
+  background: var(--border);
+
+  margin: 30px 0;
+}
+
+.pricing-card h4 {
+  font-size: 12px;
+
+  margin-bottom: 22px;
+}
+
+.features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 19px;
+
+  list-style: none;
+}
+
+.features li {
+  display: flex;
+
+  gap: 12px;
+
+  align-items: center;
+
+  color: var(--secondary);
+
+  font-size: 12px;
+}
+
+.features li span {
+  color: var(--primary);
+
+  font-weight: 800;
+}
+
+/* =====================================
+   BOTTOM CTA
+===================================== */
+
+.bottom-cta {
+  max-width: 900px;
+
+  margin: 120px auto;
+
+  padding: 65px 25px;
+
+  text-align: center;
+
+  background: #eef1ea;
+
+  border-radius: 30px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.cta-decoration {
+  font-size: 35px;
+
+  color: var(--terracotta);
+}
+
+.bottom-cta h2 {
+  font-family: var(--serif);
+
+  font-size: 36px;
+
+  font-weight: 400;
+
+  margin-top: 15px;
+}
+
+.bottom-cta p {
+  color: var(--secondary);
+
+  font-size: 13px;
+
+  margin-top: 12px;
+}
+
+.cta-button {
+  display: inline-block;
+
+  margin-top: 27px;
+
+  padding: 14px 25px;
+
+  background: var(--primary);
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  border-radius: 40px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--terracotta);
+
+  transform: translateY(-4px);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+  border-top: 1px solid var(--border);
+
+  padding: 40px 25px;
+
+  text-align: center;
+}
+
+.footer .logo {
+  font-size: 28px;
+}
+
+.footer p {
+  font-size: 12px;
+
+  color: var(--secondary);
+
+  margin-top: 12px;
+}
+
+.copyright {
+  display: block;
+
+  color: var(--secondary);
+
+  font-size: 10px;
+
+  margin-top: 25px;
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatOne {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-50px, 50px);
+  }
+}
+
+@keyframes floatTwo {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(60px, -40px);
+  }
+}
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 950px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 750px;
+
+    margin: auto;
+
+    row-gap: 35px;
+  }
+
+  .pricing-card:last-child {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 12px);
+
+    justify-self: center;
+  }
+
+  .pricing-card.popular {
+    transform: translateY(0);
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-10px);
+  }
+
+  .bottom-cta {
+    margin: 90px 30px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 22px 20px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 10px 15px;
+
+    font-size: 11px;
+  }
+
+  .hero {
+    margin: 65px auto 80px;
+
+    padding: 0 22px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .billing-area {
+    gap: 9px;
+  }
+
+  .billing-toggle {
+    gap: 9px;
+  }
+
+  .discount {
+    font-size: 9px;
+
+    padding: 7px 9px;
+  }
+
+  .pricing-section {
+    padding: 0 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 420px;
+
+    gap: 28px;
+  }
+
+  .pricing-card {
+    padding: 32px 26px;
+  }
+
+  .pricing-card:last-child {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-8px);
+  }
+
+  .bottom-cta {
+    margin: 80px 20px;
+
+    padding: 50px 20px;
+  }
+
+  .bottom-cta h2 {
+    font-size: 29px;
+  }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
